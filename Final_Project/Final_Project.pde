@@ -1,9 +1,9 @@
+thesnake s1 = new thesnake();
 
-void setup(){
-  size(800,600);
-  background(255,0,0);
+void setup() {
+  size(500, 500);
 }
 
-void draw(){
-  ellipse(500,500,100,100);
+void draw() {
+  s1.drawSnake;
 }
