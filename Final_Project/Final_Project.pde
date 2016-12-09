@@ -1,3 +1,6 @@
+//Carson Yeager 45353260
+//CSE 1341- Final Project
+
 thesnake snake;
 food yum;
 int highscore = 0;

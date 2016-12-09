@@ -34,7 +34,6 @@ class thesnake {
 
     for (int i=0; i<bodylength; i++) {
       strokeWeight(0);
-      //fill(0, 0, 255);
       ellipse(snakeX.get(i), snakeY.get(i), bodysize, bodysize);
     }
     popStyle();
