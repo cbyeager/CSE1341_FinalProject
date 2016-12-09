@@ -6,6 +6,7 @@ class thesnake {
   ArrayList<Float> snakeX, snakeY;
   boolean outsideboard;
   boolean hititself;
+  
   float h= 27;
   float INC= 1;
 
@@ -40,7 +41,7 @@ class thesnake {
   }
 
   void moveSnake() {
-    for (int i = bodylength - 1; i>0; i = i-1) {
+    for (int i = bodylength - 1; i>0; i--) {
       snakeX.set(i, snakeX.get(i-1));
       snakeY.set(i, snakeY.get(i-1));
     }
@@ -74,7 +75,7 @@ class thesnake {
       }
     }
     if (keyPressed) {
-      if (key == ' ') {
+      if (key == ' ' && (outsideboard == true || hititself == true)) {
         hititself = false;
         bodylength = 1;
         float xtemp = 200;

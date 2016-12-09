@@ -1,15 +1,16 @@
 //Carson Yeager 45353260
 //CSE 1341- Final Project
-
+//Some of the logic for changing the direction of the snake and making it move was made refrencing Katherine Quinlivan's 
+//snake game on open processing. https://www.openprocessing.org/sketch/106774 . All else is origional.
 thesnake snake;
 food yum;
 int highscore = 0;
-
+int speed = 10;
 void setup() {
   size(1000, 500);
   snake = new thesnake();
   yum = new food();
-  frameRate(10);
+  frameRate(speed);
 }
 
 void draw() {
@@ -77,9 +78,12 @@ void score() {
 }
 
 void nofoodoverlap() {
-  for (int i = 1; i < snake.bodylength; i++) {
-    if (yum.xfood == snake.snakeX.get(i) | yum.yfood == snake.snakeY.get(i)) {
-      yum.newfood();
-    }
-  }
+  //for (int i = 1; i < snake.bodylength; i++) {
+    //if (abs(yum.xfood - snake.snakeX.get(i)) <= .5 | abs(yum.yfood - snake.snakeY.get(i))<= .5) {
+      //yum.newfood();
+   // }
+ // }
+}
+
+void speed() {
 }
